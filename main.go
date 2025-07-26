@@ -14,6 +14,7 @@ func main() {
 	// Handle routes
 	http.HandleFunc("/", handlers.HomeHandler)
 	http.HandleFunc("/ascii-art", handlers.AsciiArtHandler)
+	http.HandleFunc("/export", handlers.ExportFile)
 
 	log.Println("Server running on http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))

@@ -161,3 +161,7 @@ func internalServerError(w http.ResponseWriter) {
 		http.Error(w, "500 Internal Server Error", http.StatusInternalServerError)
 	}
 }
+
+func ExportFile(w http.ResponseWriter, r *http.Request) {
+
+}
