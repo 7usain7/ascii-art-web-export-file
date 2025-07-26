@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII Art Web</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="/static/TimePieceS.webp" alt="timepiece">
+    </div>
+    <div class="container">
+        <h1 id="title">{{.}}</h1>
+        <form action="/ascii-art" method="POST">
+            <textarea name="text" placeholder="Enter your text here..." title="Please enter the text you wish to convert." required></textarea>
+            
+            <div class="banner-options">
+                <label>
+                    <input type="radio" name="banner" value="standard" checked>
+                    Standard
+                </label>
+                <label>
+                    <input type="radio" name="banner" value="shadow">
+                    Shadow
+                </label>
+                <label>
+                    <input type="radio" name="banner" value="thinkertoy">
+                    Thinkertoy
+                </label>
+            </div>
+            
+            <button type="submit">Generate ASCII Art</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII Art Result</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="/static/TimePieceS.webp" alt="timepiece">
+    </div>
+    <div class="container">
+        <div id="title">{{.Title}}</div>
+        <p><strong>Original text:</strong> {{.Text}}</p>
+        <p><strong>Banner:</strong> {{.Banner}}</p>
+        
+        <div class="result">{{.Result}}</div>
+    </div>
+    
+    
+    <a href="/">Generate another</a>
+</body>
+</html>
