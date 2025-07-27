@@ -1,7 +1,7 @@
-# ASCII Art Web Dockerize
+# ASCII Art Web Export
 
 ## Description
-A web application that converts text to ASCII art using different banners (standard, shadow, thinkertoy), with more decoration for better look, with the addition of docker.
+A web application that converts text to ASCII art using different banners (standard, shadow, thinkertoy), with more decoration for better look, with the ability to use docker and export the output to a .txt file.
 
 ## Authors
 Hussain Abdulrasool (habdulras)
@@ -14,7 +14,7 @@ Hussain Abdulrasool (habdulras)
 ## Usage with Docker
 Run the following in Command Line.
 ```
-git clone https://learn.reboot01.com/git/oaljamal/ascii-art-web-
+git clone https://learn.reboot01.com/git/habdulras/ascii-art-web-dockerize
 cd ascii-art-web-dockerize
 
 1. docker build -f Dockerfile -t ascii-art-web-image .
@@ -37,6 +37,8 @@ The algorithm works by:
 - Three different ASCII art styles
 - Web interface with form input
 - Error handling for invalid input
+- Run on Docker
+- Export to custom .txt file
 
 ## References
 https://hub.docker.com/_/golang
