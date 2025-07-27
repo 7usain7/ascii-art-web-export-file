@@ -44,7 +44,15 @@
             margin-top: 20px;
             text-decoration: none;
         }
-        a:hover {
+        a:hover, .export-btn:hover {
             background-color: #5bcc5f;
             cursor: pointer;
+        }
+        .export-btn {
+            color: white;
+            background-color: #4eb051;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
         }

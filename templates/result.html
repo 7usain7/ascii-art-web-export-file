@@ -14,8 +14,12 @@
         <p><strong>Banner:</strong> {{.Banner}}</p>
         
         <div class="result">{{.Result}}</div>
+
+        <form action="/export" method="POST">
+            <input type="hidden" name="result" value="{{.Result}}">
+            <button type="submit" class="export-btn">Export ASCII Art</button>
+        </form>
     </div>
-    
     
     <a href="/">Generate another</a>
 </body>

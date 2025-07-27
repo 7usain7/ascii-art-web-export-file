@@ -4,6 +4,7 @@ import (
 	"ascii-art-web/core"
 	"log"
 	"net/http"
+	"strconv"
 	"text/template"
 )
 
@@ -163,5 +164,21 @@ func internalServerError(w http.ResponseWriter) {
 }
 
 func ExportFile(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 
+	result := r.FormValue("result")
+	if result == "" {
+		badRequestHandler(w, "No text to export")
+		return
+	}
+
+	// Set headers
+	w.Header().Set("Content-Disposition", "attachment; filename=ascii-art.txt")
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Content-Length", strconv.Itoa(len(result)))
+
+	w.Write([]byte(result))
 }
