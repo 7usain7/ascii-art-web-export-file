@@ -7,6 +7,17 @@ import (
 )
 
 func ProcessInput(str, banner string) (string, error) {
+	input := ""
+	for i := range len(str) {
+		if str[i] == 10 {
+			input += "\\n"
+			continue
+		} else if str[i] == 13 {
+			continue
+		}
+		input += string(str[i])
+	}
+
 	filePath := "models/" + banner + ".txt"
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -15,7 +26,7 @@ func ProcessInput(str, banner string) (string, error) {
 	defer file.Close()
 
 	var allResults [][]string
-	lines := strings.Split(str, "\\n")
+	lines := strings.Split(input, "\\n")
 	for _, line := range lines {
 		var result []string
 		i := 0
