@@ -4,7 +4,7 @@
 A web application that converts text to ASCII art using different banners (standard, shadow, thinkertoy), with more decoration for better look, with the ability to use docker and export the output to a .txt file.
 
 ## Authors
-Hussain Abdulrasool (habdulras)
+Hussain (7usain7)
 
 ## Usage
 1. Clone the repository
@@ -44,3 +44,7 @@ The algorithm works by:
 https://hub.docker.com/_/golang
 
 https://docs.docker.com/reference/dockerfile/
+
+## License
+
+This project is proprietary. The code is publicly visible for portfolio and viewing purposes only. No unauthorized copying, modification, or distribution is permitted. See [LICENSE](LICENSE) for details.
